@@ -8,7 +8,7 @@ Tento repozitář obsahuje SQL skripty k analýze českých dat o mzdách, cená
 |-------------------------------------------|-------------------------------------------|
 | `01_create_primary_final.sql`             | Vytvoří primární tabulku s průměrnými ročními mzdami a cenami potravin. |
 | `02_create_secondary_final.sql`           | Vytvoří sekundární tabulku s makrodaty (HDP, GINI, populace) pro evropské státy mimo ČR. |
-| `03_wage_decline_by_industry.sql`         | Najde odvětví, kde mzdy meziročně klesaly. |
+| `03_wage_drop.sql`                        | Najde odvětví, kde mzdy meziročně klesaly. |
 | `04_milk_and_bread_affordability.sql`     | Vypočte, kolik litrů mléka/kg chleba si koupíte za průměrnou mzdu. |
 | `05_slowest_price_increase.sql`           | Určí potravinu s nejpomalejším kladným meziročním růstem ceny. |
 | `06_price_growth_exceeds_wage_growth.sql` | Najde roky, kdy cenový růst překonal růst mezd o více než 10 %. |
