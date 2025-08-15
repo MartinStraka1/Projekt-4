@@ -45,6 +45,7 @@ Dlouhodobý trend mezd je růstový ve většině odvětví. Meziroční poklesy
    Soubor: `04_milk_and_bread_affordability.sql`  
    - Pro vybrané položky („Mléko polotučné pasterované“, „Chléb konzumní kmínový“), poměr `plat / prumerna_cena` v prvním a posledním dostupném roce (po odvětvích).
    - Shrnutí:
+     
 Chléb (kg za průměrnou mzdu)
 2006 (první rok): průměr napříč odvětvími ≈ 1 287 kg (medián 1 147 kg; rozpětí 707–2 462 kg)
 2018 (poslední rok): průměr ≈ 1 342 kg (medián 1 213 kg; rozpětí 774–2 314 kg)
