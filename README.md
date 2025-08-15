@@ -12,7 +12,7 @@ Schéma: `data_academy_content`
 
 ---
 
-## 2) Jak jsem tvořil(a) tabulky
+## 2) Jak jsem tvořil tabulky
 
 ### 2.1 Primární tabulka (ČR)  
 Soubor: `sql/01_create_primary_final.sql`  
@@ -38,23 +38,33 @@ Popis:
 1. **Kde mzdy meziročně klesaly?**  
    Soubor: `03_wage_drop.sql`  
    - Vypočet průměrné mzdy po odvětví a roce + `LAG` proti předchozímu roku, filtr na pokles.
+   - Shrnutí:
+Dlouhodobý trend mezd je růstový ve většině odvětví. Meziroční poklesy se ale v několika letech a odvětvích vyskytují – typicky v obdobích ekonomického zpomalení. Poklesy jsou spíše krátkodobé výkyvy, po nichž se odvětví obvykle vrací na růstovou trajektorii.
 
 2. **Kolik litrů mléka / kg chleba za mzdu (první a poslední rok)?**  
    Soubor: `04_milk_and_bread_affordability.sql`  
    - Pro vybrané položky („Mléko polotučné pasterované“, „Chléb konzumní kmínový“), poměr `plat / prumerna_cena` v prvním a posledním dostupném roce (po odvětvích).
+   - Shrnutí:
+Kupní síla vůči oběma základním položkám se v čase zlepšila. Za průměrnou mzdu si lze v posledním srovnatelném roce koupit více litrů mléka i kilogramů chleba než v prvním roce, který je v datech k dispozici. Zlepšení je vidět napříč odvětvími, liší se ale podle výše mezd v dané branži.
 
 3. **Nejpomaleji zdražující potravina (kladný meziroční růst nejnižší)?**  
    Soubor: `05_slowest_price_increase.sql`  
    - `LAG(prumerna_cena)` po potravině, výpočet % změny, filtr na růst a `ORDER BY pct_zmena ASC LIMIT 1`.
+   - Shrnutí:
+Nejpomaleji zdražující položkou je Rostlinný roztíratelný tuk v roce 2009, kde meziroční růst průměrné ceny činil pouze +0,01 % (prakticky stabilní cena oproti roku 2008).
 
 4. **Roky, kdy ceny rostly > 10 % nad mzdy?**  
    Soubor: `06_price_growth_exceeds_wage_growth.sql`  
    - Meziroční % růst **průměrné ceny** a **průměrné mzdy** (agregace za všechny položky), rozdíl (cena − mzda) > 10 p. b.  
    - *Pozn.: V aktuálních datech dotaz vrací prázdnou množinu (nenastal takový rok).*
+   - Shrnutí:
+V dostupném období jsme nenašli rok, kdy by cenový růst převyšoval růst mezd o více než 10 p. b. Cenový vývoj byl sice v některých letech rychlejší než mzdový, ale rozdíl nedosáhl uvedené hranice.
 
 5. **Vliv HDP na mzdy a ceny (přehled růstů)**  
    Soubor: `07_gdp_influence_on_wages_and_prices.sql`  
    - Meziroční % růst **HDP** (ČR), **mezd** a **cen**; spojení podle roku, seřazení podle růstu HDP.
+   - Shrnutí:
+Mezi růstem HDP a růstem mezd pozorujeme zřetelný pozitivní vztah: v letech vyššího růstu HDP mzdy typicky rostou rychleji, v letech zpomalení/poklesu HDP růst mezd slábne. Vztah mezi HDP a cenami potravin je volnější – ceny reagují i na další faktory (např. komoditní ceny, kurz, regulace).
 
 ---
 
