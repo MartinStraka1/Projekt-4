@@ -45,7 +45,15 @@ Dlouhodobý trend mezd je růstový ve většině odvětví. Meziroční poklesy
    Soubor: `04_milk_and_bread_affordability.sql`  
    - Pro vybrané položky („Mléko polotučné pasterované“, „Chléb konzumní kmínový“), poměr `plat / prumerna_cena` v prvním a posledním dostupném roce (po odvětvích).
    - Shrnutí:
-Kupní síla vůči oběma základním položkám se v čase zlepšila. Za průměrnou mzdu si lze v posledním srovnatelném roce koupit více litrů mléka i kilogramů chleba než v prvním roce, který je v datech k dispozici. Zlepšení je vidět napříč odvětvími, liší se ale podle výše mezd v dané branži.
+Chléb (kg za průměrnou mzdu)
+2006 (první rok): průměr napříč odvětvími ≈ 1 287 kg (medián 1 147 kg; rozpětí 707–2 462 kg)
+2018 (poslední rok): průměr ≈ 1 342 kg (medián 1 213 kg; rozpětí 774–2 314 kg)
+Změna: +4,3 % (≈ +55 kg)
+
+Mléko (l za průměrnou mzdu)
+2006 (první rok): průměr ≈ 1 437 l (medián 1 280 l; rozpětí 789–2 749 l)
+2018 (poslední rok): průměr ≈ 1 642 l (medián 1 484 l; rozpětí 947–2 831 l)
+Změna: +14,2 % (≈ +204 l)
 
 3. **Nejpomaleji zdražující potravina (kladný meziroční růst nejnižší)?**  
    Soubor: `05_slowest_price_increase.sql`  
